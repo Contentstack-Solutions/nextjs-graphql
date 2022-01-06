@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
     query {
